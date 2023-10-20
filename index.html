@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	body {
+	 background-image:url("https://i.pinimg.com/originals/74/31/17/743117b1f2c1fa040b88f81f08b8620f.gif");
+	background-size: cover;
+	 height: 100vh;
+	 background-position: center;
+   }
+	
+	header{
+			background-color: #333;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+			font-size: 25px;
+			font-weight: bold;
+		}
+		table
+		{
+			background-color: #2e86ac;
+		}
+		nav{
+			background-color: #5ba7e4;
+			color: #0e0d0d;
+			padding: 10px;
+			text-align:center;
+			font-size: 20px;
+		}
+		nav a{
+			color: #fff;
+			padding: 10px;
+			text-decoration:none;
+		}
+		nav a:hover{
+			background-color: rgb(186, 215, 219);
+			color:#72dfdf;
+		
+		}
+		nav{
+			background-color: #0e0d0d;
+			color:white;
+		}
+		main{
+			margin: 20px;
+			font-size: 20px;
+			font-weight: bold;
+		}
+		h1{
+			font-size: 30px;
+			font-weight: bold;
+			text-align: center;
+			margin-top: 50px;
+
+		}
+		button{
+			background-color: #e0e2c8;
+			text-align: center;
+			font-weight: lighter;
+			font-style: oblique;
+
+		}
+		footer{
+			background-color: #333;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+			font-size: 18px;
+		}
+	</style>
+	<script>
+	function validationForm()
+	{
+	   var name = document.forms["myForm"]["name"].value;
+	   var email = document.forms["myForm"]["email"].value;
+       var password = document.forms["myForm"]["password"].value;
+	   if (name == "") {
+		 alert("Name must be filled out");
+		 return false;
+	   }
+	   
+	   if (email == "" || !validateEmail(email)) {
+		 alert("Email address is invalid");
+		 return false;
+	   }
+	   
+	   if (password==""){
+		  alter("Password must be filled out");
+		  return false;
+	   }
+	 }
+	 
+	 function validateEmail(email) {
+	   var re = /\S+@\S+\.\S+/;
+	   return re.test(email);
+	 }
+	function validatePassword(password){
+		const regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+		if regex.test(password); 
+		return true;
+    }
+</script>
+<body>
+	<header>Brainwave</header>
+	<nav>
+		<a href="#home">Home</a>
+		<a href="aboutus.html">About Us</a>
+		<a href="courses.html">Courses</a>
+		<a href="contactus.html">Contact Us</a>
+		<br>
+		</nav>
+		<button id="SignUp"><a href="login.html">SignUp</a></button>
+		
+
+ 	<section id="home">
+			<div class="section-content">
+				<font color="brown" size="13">
+				<h2>Home</h2>
+				<font color="black" size="10">
+			<p> Education is the gateway to success in life, with the right mindset, discipline, and quality of education, 
+				one can achieve their goals and dreams.
+				Education is not just about getting good grades;it is a tool for personal development, 
+				creating social and economic opportunities, and building a better future for oneself and society. 
+				Investing in education is an investment in one's future, with the power to change lives for the better.We are proud to be a part of it!!</p>
+			</p>
+       </div>
+	</section>
+	<br>
+	<nav>
+		<a href="#login">Login</a>
+	</nav>
+	<section id="login">
+		<div class="section-content">
+	<font color="blue" size="5">
+	<form action=""  method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+        <input type="submit" value="Submit">
+        <input type="reset"value="Reset" onclick="clearErrors()">
+    </form>
+        </div>
+    </section>
+
+	
+
+	<br>
+	<footer>
+		&copy; 2023 Brainwave!
+	</footer>
+
+</body>
+</html>
+
